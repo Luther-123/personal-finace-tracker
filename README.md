@@ -65,7 +65,11 @@ uvicorn main:app --reload
 
 ```
 
-The backend API will run locally at http://127.0.0.1:8000.
+The backend API will run locally at
 
+```text
+ http://127.0.0.1:8000.
+
+```
 4. Launch the Frontend
 Open any of the HTML files inside the htmlfiles/ folder directly in your browser or serve them using a live server extension in VS Code to interact with the dashboard.
