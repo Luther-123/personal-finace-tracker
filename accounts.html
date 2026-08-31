@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>M.</h2>
+            </div>
+            <div class="sidebar-menu">
+                <span class="menu-category">Navigation</span>
+                <div class="sidebar-links">
+                    <a href="index.html">
+                        <span class="icon">📊</span> Dashboard
+                    </a>
+                    <a href="accounts.html">
+                        <span class="icon">💳</span> Accounts
+                    </a>
+                    <a href="cards.html">
+                        <span class="icon">🛡️</span> Cards
+                    </a>
+                    <a href="transactions.html">
+                        <span class="icon">🔄</span> Transactions
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="top-header-row" style="margin-bottom: 24px;">
+                <div>
+                    <h1>Accounts</h1>
+                    <p style="color: #64748b; font-size: 14px; margin-top: 4px;">Total Net Worth: <strong
+                            id="totalNetWorth" style="color: #0f172a;">Kes 0.00</strong></p>
+                </div>
+                <button class="action-btn" id="openAccountModalBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                    <span>Add new account</span>
+                </button>
+            </div>
+
+            <div id="accountsListContainer" style="display: flex; flex-direction: column; gap: 16px;">
+                <!-- Dynamic accounts will load here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Account Modal -->
+    <div id="accountModal" class="modal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000;">
+        <div class="modal-content"
+            style="background: white; padding: 30px; border-radius: 12px; width: 400px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <h3>Add New Bank Account</h3>
+            <form id="accountForm" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                <div>
+                    <label for="accTitle" style="display: block; margin-bottom: 5px; font-size: 14px;">Account
+                        Name</label>
+                    <input type="text" id="accTitle" placeholder="e.g. Equity Bank Checking" required
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+                <div>
+                    <label for="accNumber" style="display: block; margin-bottom: 5px; font-size: 14px;">Account
+                        Number</label>
+                    <input type="text" id="accNumber" placeholder="e.g. 9841 **** **** 1234" required
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+                <div>
+                    <label for="accBalance" style="display: block; margin-bottom: 5px; font-size: 14px;">Initial Balance
+                        (Kes)</label>
+                    <input type="number" id="accBalance" step="0.01" required
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+                    <button type="button" id="closeAccountModalBtn"
+                        style="padding: 8px 15px; background: #e0e0e0; border: none; border-radius: 6px; cursor: pointer;">Cancel</button>
+                    <button type="submit"
+                        style="padding: 8px 15px; background: #6366f1; color: white; border: none; border-radius: 6px; cursor: pointer;">Save
+                        Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="accounts.js"></script>
+</body>
+
+</html>

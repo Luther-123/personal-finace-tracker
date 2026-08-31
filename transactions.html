@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>M.</h2>
+            </div>
+            <div class="sidebar-menu">
+                <span class="menu-category">Navigation</span>
+                <div class="sidebar-links">
+                    <a href="index.html">
+                        <span class="icon">📊</span> Dashboard
+                    </a>
+                    <a href="accounts.html">
+                        <span class="icon">💳</span> Accounts
+                    </a>
+                    <a href="cards.html">
+                        <span class="icon">🛡️</span> Cards
+                    </a>
+                    <a href="transactions.html">
+                        <span class="icon">🔄</span> Transactions
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <div class="top-header-row">
+                <h1>Transactions History</h1>
+                <button id="exportCsvBtn" class="action-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                    <span>Export CSV</span>
+                </button>
+            </div>
+
+            <!-- Transactions Layout Grid -->
+            <div class="dashboard-layout-grid">
+                <div class="left-column" style="width: 100%;">
+                    <div class="transaction-card" style="max-width: 100%;">
+                        <div class="card-header">
+                            <h2>All Transactions</h2>
+                        </div>
+
+                        <!-- Date Group 1 -->
+                        <div class="date-group">
+                            <div class="group-date">28 August</div>
+                            <div class="transaction-item">
+                                <div class="item-icon bg-blue">E</div>
+                                <div class="item-details">
+                                    <p class="item-title">Online purchase at Ebay.com</p>
+                                    <p class="item-time">28 Aug, 3:00 PM</p>
+                                </div>
+                                <div class="item-amount negative">-Kes 10,480.00</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="item-icon bg-blue-light">A</div>
+                                <div class="item-details">
+                                    <p class="item-title">ATM Cash withdrawal</p>
+                                    <p class="item-time">28 Aug, 2:15 AM</p>
+                                </div>
+                                <div class="item-amount negative">-Kes 201.50</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="item-icon bg-black">a</div>
+                                <div class="item-details">
+                                    <p class="item-title">Online purchase on Amazon.com</p>
+                                    <p class="item-time">28 Aug, 5:40 PM</p>
+                                </div>
+                                <div class="item-amount negative">-Kes 184.00</div>
+                            </div>
+                        </div>
+
+                        <!-- Date Group 2 -->
+                        <div class="date-group">
+                            <div class="group-date">24 August</div>
+                            <div class="transaction-item">
+                                <div class="item-icon bg-blue-light">I</div>
+                                <div class="item-details">
+                                    <p class="item-title">Income payment for projects</p>
+                                    <p class="item-time">24 Aug, 6:20 PM</p>
+                                </div>
+                                <div class="item-amount positive">+Kes 3,000.00</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="item-icon bg-blue">G</div>
+                                <div class="item-details">
+                                    <p class="item-title">Groceries store</p>
+                                    <p class="item-time">24 Aug, 1:00 AM</p>
+                                </div>
+                                <div class="item-amount negative">-Kes 400.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
