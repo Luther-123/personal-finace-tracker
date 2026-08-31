@@ -43,7 +43,7 @@ PERSONAL FINANCE TRACKER/
 Getting Started Locally
 1. Clone the Repository
 Bash
-git clone [https://github.com/Luther-123/personal-finace-tracker.git](https://github.com/Luther-123/personal-finace-tracker.git)
+git clone https://github.com/Luther-123/personal-finace-tracker.git
 cd "Personal Finance Tracker"
 2. Set Up the Backend
 Navigate to the backend directory, create a virtual environment, and install dependencies:
