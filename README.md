@@ -43,22 +43,28 @@ PERSONAL FINANCE TRACKER/
 ```
 Getting Started Locally
 1. Clone the Repository
-Bash
+```text
 git clone [https://github.com/Luther-123/personal-finace-tracker.git](https://github.com/Luther-123/personal-finace-tracker.git)
 cd "Personal Finance Tracker"
+```
+
 2. Set Up the Backend
 Navigate to the backend directory, create a virtual environment, and install dependencies:
 
-Bash
+```text
 cd backend
 python -m venv .venv
 source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install -r requirements.txt
+```
 3. Run the FastAPI Server
 Start the development server:
 
-Bash
+```text
 uvicorn main:app --reload
+
+```
+
 The backend API will run locally at http://127.0.0.1:8000.
 
 4. Launch the Frontend
